@@ -1,0 +1,24 @@
+@import "reset.css";
+
+body {
+    background-color: #D8DEE9;
+}
+
+.App {
+    text-align: center;
+}
+
+.box {
+    background-color: #E5E9F0;
+    height: 3em;
+    width: 15em;
+    border-radius: 0.5em;
+    padding-right: 3em;
+    line-height: 3em;
+    margin-bottom: 0.5em;
+}
+
+.box p {
+    float: left;
+    padding-left: 3em;
+}
