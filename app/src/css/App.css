@@ -8,6 +8,10 @@ body {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
 .box {
     background-color: #E5E9F0;
     height: 3em;
