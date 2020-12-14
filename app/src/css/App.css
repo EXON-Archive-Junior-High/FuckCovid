@@ -20,6 +20,7 @@ body {
     padding-right: 3em;
     line-height: 3em;
     margin-bottom: 0.5em;
+    display: inline-block;
 }
 
 .box p {

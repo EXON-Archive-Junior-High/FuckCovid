@@ -8,6 +8,7 @@ export default class App extends Component {
             <div className="App center">
                 <Box area="서울" all={10} today={100} />
                 <Box area="서울" all={10} today={100} />
+                <Box area="서울" all={10} today={100} />
             </div>
         )
     }
