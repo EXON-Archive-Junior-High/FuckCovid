@@ -2,6 +2,7 @@
 
 body {
     background-color: #D8DEE9;
+    color: #2E3440;
 }
 
 .App {
@@ -12,8 +13,12 @@ body {
     text-align: center;
 }
 
+.float {
+    float: left;
+}
+
 .box {
-    background-color: #E5E9F0;
+    background-color: #ECEFF4;
     height: 3em;
     width: 15em;
     border-radius: 0.5em;
@@ -23,7 +28,33 @@ body {
     display: inline-block;
 }
 
+.box .gray {
+    background-color: #919FD0;
+}
+
+.box .white {
+    background-color: #ECEFF4;
+}
+
+.info {
+    padding-top: 2em;
+}
+
 .box p {
     float: left;
     padding-left: 3em;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.main p {
+    font-size: larger;
+    font-weight: bold;
+    padding-top: 1em;
 }

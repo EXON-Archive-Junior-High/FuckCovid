@@ -1,5 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
+import schedule
+import time
 
 webpage = requests.get("http://ncov.mohw.go.kr/")
 soup = BeautifulSoup(webpage.content, "html.parser")
