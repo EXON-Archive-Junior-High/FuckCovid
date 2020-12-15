@@ -32,3 +32,8 @@ print("누적 치료 중: " + all_cure)
 print("일일 치료 중: " + today_cure)
 print("누적 사망자: " + all_die)
 print("일일 사망자: " + today_die)
+
+f = open("data.json", "w")
+f.write(f"{{\"all_confirmed_person\" : \"{all_confirmed_person}\",\"today_confirmed_person\" : \"{today_confirmed_person}\", \"all_quarantine_release\" : \"{all_quarantine_release}\",\"today_quarantine_release\" : \"{today_quarantine_release}\",\"all_cure\" : \"{all_cure}\",\"today_cure\" : \"{today_cure}\",\"all_die\" : \"{all_die}\",\"today_die\" : \"{today_die}\"}}")
+
+f.close()
