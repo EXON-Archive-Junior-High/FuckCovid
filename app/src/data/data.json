@@ -1,1 +1,7 @@
-{"all_confirmed_person" : "45,442","today_confirmed_person" : "1078", "all_quarantine_release" : "32,947","today_quarantine_release" : "388","all_cure" : "11,883","today_cure" : "678","all_die" : "612","today_die" : "12"}
+{"all_confirmed_person" : "45,442", "today_confirmed_person" : "1078",
+        "all_quarantine_release" : "32,947", "today_quarantine_release" : "388",
+        "all_cure" : "11,883","today_cure" : "678",
+        "all_die" : "612", "today_die" : "12",
+        [
+            {"num": "{'num': '13,035', 'before': '(+378)'}", ""}
+        ]}
