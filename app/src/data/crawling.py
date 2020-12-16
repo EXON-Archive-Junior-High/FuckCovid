@@ -5,6 +5,9 @@ import time
 import os, sys
 
 def convert2today(str): return str.split("(+ ")[1].split(")")[0]
+def getNum(o): return o.select_one("button > span.num").get_text()
+def getBefore(o): return o.select_one("button > span.before").get_text()
+def bs2dict(region): return { "num": getNum(region), "before": getBefore(region) }
 
 def task():
     webpage = requests.get("http://ncov.mohw.go.kr/")
@@ -26,6 +29,27 @@ def task():
     all_die = soup.select_one("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.num").get_text()
     # 일일 사망자
     today_die = convert2today(soup.select_one("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.before").get_text())
+    
+    regions = soup.select("#main_maplayout > button")
+    print(regions[0])
+    seoul = bs2dict(regions[0])
+    busan = bs2dict(regions[1])
+    daegu = bs2dict(regions[2])
+    incheon = bs2dict(regions[3])
+    gwangju = bs2dict(regions[4])
+    daejeon = bs2dict(regions[5])
+    ulsan = bs2dict(regions[6])
+    sejong = bs2dict(regions[7])
+    gyeonggi = bs2dict(regions[8])
+    gangwon = bs2dict(regions[9])
+    chungbuk = bs2dict(regions[10])
+    chungnam = bs2dict(regions[11])
+    jeonbuk = bs2dict(regions[12])
+    jeonnam = bs2dict(regions[13])
+    gyeongbuk = bs2dict(regions[14])
+    gyeongnam = bs2dict(regions[15])
+    jeju = bs2dict(regions[16])
+    quarantine = bs2dict(regions[17])
 
     print("누적 확진: " + all_confirmed_person)
     print("일일 확진: " + today_confirmed_person)
@@ -35,6 +59,7 @@ def task():
     print("일일 치료 중: " + today_cure)
     print("누적 사망자: " + all_die)
     print("일일 사망자: " + today_die)
+    print(regions[0])
 
     f = open("data.json", "w")
     f.write(f"{{\"all_confirmed_person\" : \"{all_confirmed_person}\",\"today_confirmed_person\" : \"{today_confirmed_person}\", \"all_quarantine_release\" : \"{all_quarantine_release}\",\"today_quarantine_release\" : \"{today_quarantine_release}\",\"all_cure\" : \"{all_cure}\",\"today_cure\" : \"{today_cure}\",\"all_die\" : \"{all_die}\",\"today_die\" : \"{today_die}\"}}")
@@ -43,7 +68,7 @@ def task():
     os.system("git commit -am \"update\"")
     os.system("git push -u origin main")
 
-
+task()
 
 while True:
     schedule.every().day.do(task)
