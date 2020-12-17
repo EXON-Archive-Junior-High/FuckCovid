@@ -1,7 +1,26 @@
-{"all_confirmed_person" : "45,442", "today_confirmed_person" : "1078",
-        "all_quarantine_release" : "32,947", "today_quarantine_release" : "388",
-        "all_cure" : "11,883","today_cure" : "678",
-        "all_die" : "612", "today_die" : "12",
-        [
-            {"num": "{'num': '13,035', 'before': '(+378)'}", ""}
-        ]}
+{
+        "all_confirmed_person" : "46,453", "today_confirmed_person" : "1014",
+        "all_quarantine_release" : "33,610", "today_quarantine_release" : "663",
+        "all_cure" : "12,209","today_cure" : "329",
+        "all_die" : "634", "today_die" : "22",
+        "regions" : [
+            {"num": "13,458", "before":"423"},{"num": "1,382", "before":"44"},{"num": "7,432", "before":"21"},{"num": "2,076", "before":"80"},{"num": "839", "before":"10"},{"num": "683", "before":"11"},{"num": "499", "before":"10"},{"num": "128", "before":"0"},{"num": "10,871", "before":"291"},{"num": "851", "before":"9"},{"num": "622", "before":"19"},{"num": "1,210", "before":"19"},{"num": "615", "before":"19"},{"num": "485", "before":"0"},{"num": "1,902", "before":"9"},{"num": "935", "before":"30"},{"num": "154", "before":"12"},{"num": "2,311", "before":"7"},,
+            {"num": "1,382", "before":"44"},
+            {"num": "7,432", "before":"21"},
+            {"num": "2,076", "before":"80"},
+            {"num": "839", "before":"10"},
+            {"num": "683", "before":"11"},
+            {"num": "499", "before":"10"},
+            {"num": "128", "before":"0"},
+            {"num": "10,871", "before":"291"},
+            {"num": "851", "before":"9"},
+            {"num": "622", "before":"19"},
+            {"num": "1,210", "before":"19"},
+            {"num": "615", "before":"19"},
+            {"num": "485", "before":"0"},
+            {"num": "1,902", "before":"9"},
+            {"num": "935", "before":"30"},
+            {"num": "154", "before":"12"},
+            {"num": "2,311", "before":"7"}
+        ]
+        }
