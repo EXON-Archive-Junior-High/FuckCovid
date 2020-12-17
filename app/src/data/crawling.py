@@ -12,7 +12,7 @@ def dict2json(o): return f"""{{"num": "{o["num"]}", "before":"{o["before"]}"}}""
 def jsonFor(o):
     string = ""
     for i in range(0, 18): string += f"{dict2json(o[i])},"
-    return string
+    return string[:-1]
 
 def task():
     webpage = requests.get("http://ncov.mohw.go.kr/")
@@ -41,8 +41,8 @@ def task():
         }}""")
     f.close()
 
-    #os.system("git commit -am \"update\"")
-    #os.system("git push -u origin main")
+    os.system("git commit -am \"update\"")
+    os.system("git push -u origin main")
 
 task()
 
