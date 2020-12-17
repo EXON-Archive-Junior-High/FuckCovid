@@ -44,7 +44,6 @@ def task():
     os.system("git commit -am \"update\"")
     os.system("git push -u origin main")
 
-task()
-
 while True:
-    schedule.every().day.do(task)
+    task()
+    time.sleep(86400)
