@@ -14,6 +14,7 @@ def jsonFor(o):
     return string[:-1]
 
 def task():
+    os.system("git pull origin main")
     webpage = requests.get("http://ncov.mohw.go.kr/")
     soup = BeautifulSoup(webpage.content, "html.parser")
 
@@ -41,7 +42,7 @@ def task():
     f.close()
 
     os.system("git commit -am \"update\"")
-    os.system("git push -u origin main")
+    os.system("git push origin main")
 
 while True:
     task()
