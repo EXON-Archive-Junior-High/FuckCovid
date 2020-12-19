@@ -41,7 +41,7 @@ def task():
     f.close()
 
     os.system("git commit -am \"update\"")
-    os.system("git push -u origin main")
+    os.system("git push origin main")
 
 while True:
     task()
