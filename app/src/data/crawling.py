@@ -43,10 +43,10 @@ def task():
         }}""")
     f.close()
 
-    print("\033[104m" + "[End Crawling]" + "\033[0m")
+    print("\033[94m" + "[End Crawling]" + "\033[0m")
     os.system("git commit -am \"update\"")
     os.system("git push origin main")
-    print("\033[104m" + "[End]" + "\033[0m")
+    print("\033[94m" + "[End]" + "\033[0m")
 
 while True:
     task()
