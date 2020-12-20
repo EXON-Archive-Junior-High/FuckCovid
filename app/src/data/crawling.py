@@ -46,6 +46,7 @@ def task():
     print("\033[94m" + "[End Crawling]" + "\033[0m")
     os.system("git commit -am \"update\"")
     os.system("git push origin main")
+    os.system("yarn deploy")
     print("\033[94m" + "[End]" + "\033[0m")
 
 while True:
