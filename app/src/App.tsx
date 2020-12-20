@@ -25,10 +25,6 @@ export default class App extends Component {
                     <p>일일 사망자</p>
                     <h2>{data.today_die}</h2>
                 </div>
-
-                <Box color="white" area="서울" all={10} today={100} />
-                <Box color="gray" area="서울" all={10} today={100} />
-                <Box color="white" area="서울" all={10} today={100} />
             </div>
         )
     }
