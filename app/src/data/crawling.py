@@ -51,4 +51,4 @@ def task():
 
 while True:
     task()
-    time.sleep(86400)
+    time.sleep(3600)
