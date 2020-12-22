@@ -1,7 +1,7 @@
 {
-        "all_confirmed_person" : "50,591", "today_confirmed_person" : "926",
-        "all_quarantine_release" : "35,155", "today_quarantine_release" : "433",
-        "all_cure" : "14,738","today_cure" : "469",
-        "all_die" : "698", "today_die" : "24",
-        "regions" : [{"num": "15,039", "before":"328"},{"num": "1,513", "before":"20"},{"num": "7,518", "before":"21"},{"num": "2,336", "before":"88"},{"num": "879", "before":"13"},{"num": "699", "before":"3"},{"num": "562", "before":"17"},{"num": "129", "before":"0"},{"num": "11,946", "before":"244"},{"num": "976", "before":"25"},{"num": "803", "before":"33"},{"num": "1,288", "before":"16"},{"num": "688", "before":"13"},{"num": "508", "before":"9"},{"num": "2,035", "before":"48"},{"num": "1,077", "before":"15"},{"num": "252", "before":"23"},{"num": "2,343", "before":"10"}]
+        "all_confirmed_person" : "51,460", "today_confirmed_person" : "869",
+        "all_quarantine_release" : "35,928", "today_quarantine_release" : "773",
+        "all_cure" : "14,810","today_cure" : "72",
+        "all_die" : "722", "today_die" : "24",
+        "regions" : [{"num": "15,356", "before":"317"},{"num": "1,539", "before":"26"},{"num": "7,557", "before":"39"},{"num": "2,381", "before":"45"},{"num": "905", "before":"26"},{"num": "708", "before":"9"},{"num": "568", "before":"6"},{"num": "130", "before":"1"},{"num": "12,152", "before":"206"},{"num": "999", "before":"23"},{"num": "834", "before":"31"},{"num": "1,305", "before":"17"},{"num": "692", "before":"4"},{"num": "513", "before":"5"},{"num": "2,094", "before":"59"},{"num": "1,095", "before":"18"},{"num": "271", "before":"19"},{"num": "2,361", "before":"18"}]
         }
