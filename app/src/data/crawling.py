@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from selenium import webdriver
 import requests
 import time
 import os, sys
@@ -17,6 +18,24 @@ def task():
     print("\033[31m" + "[Start]" + "\033[0m")
     os.system("git pull origin main")
     print("\033[31m" + "[Start Crawling..]" + "\033[0m")
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    options.add_argument('window-size=1920x1080')
+    options.add_argument(
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/83.0.4103.116 "
+            "Safari/537.36"
+            )
+    options.add_argument("disable-gpu")
+
+    url = 'http://ncov.mohw.go.kr/'
+    driver = webdriver.Chrome("chromedriver.exe", options = options)
+    driver.get(url)
+
+    button = webdriver.find_element_by_xpath('/html/body/div/div[5]/div[2]/div/div[1]/div[2]/div/div[2]/div/div[1]/ul/li[2]/a')
+    button.click()
+    
     webpage = requests.get("http://ncov.mohw.go.kr/")
     soup = BeautifulSoup(webpage.content, "html.parser")
 
