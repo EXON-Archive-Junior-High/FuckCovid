@@ -1,12 +1,11 @@
 from bs4 import BeautifulSoup
-from selenium import webdriver
 import requests
 import time
 import os, sys
 
 def convert2today(str): return str.split("(+ ")[1].split(")")[0]
-def getNum(o): return o.select_one("button > span.num").get_text()
-def getBefore(o): return o.select_one("button > span.before").get_text().replace("(", "").replace(")", "").replace("+", "")
+def getNum(o): return o.select_one("#main_maplayout > button > span.num").get_text()
+def getBefore(o): return o.select_one("#main_maplayout > button > span.before").get_text().replace("(", "").replace(")", "").replace("+", "")
 def bs2dict(region): return { "num": getNum(region), "before": getBefore(region) }
 def dict2json(o): return f"""{{"num": "{o["num"]}", "before":"{o["before"]}"}}"""
 def jsonFor(o):
@@ -18,23 +17,6 @@ def task():
     print("\033[31m" + "[Start]" + "\033[0m")
     os.system("git pull origin main")
     print("\033[31m" + "[Start Crawling..]" + "\033[0m")
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    options.add_argument('window-size=1920x1080')
-    options.add_argument(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/83.0.4103.116 "
-            "Safari/537.36"
-            )
-    options.add_argument("disable-gpu")
-
-    url = 'http://ncov.mohw.go.kr/'
-    driver = webdriver.Chrome("chromedriver.exe", options = options)
-    driver.get(url)
-
-    button = webdriver.find_element_by_xpath('/html/body/div/div[5]/div[2]/div/div[1]/div[2]/div/div[2]/div/div[1]/ul/li[2]/a')
-    button.click()
     
     webpage = requests.get("http://ncov.mohw.go.kr/")
     soup = BeautifulSoup(webpage.content, "html.parser")
@@ -48,7 +30,7 @@ def task():
     all_die = soup.select_one("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.num").get_text()
     today_die = convert2today(soup.select_one("body > div > div.mainlive_container > div.container > div > div.liveboard_layout > div.liveNumOuter > div.liveNum > ul > li:nth-child(4) > span.before").get_text())
     
-    old_regions = soup.select("#main_maplayout > button")
+    old_regions = soup.find("#main_maplayout > button")
     new_regions = []
     for i in range(0, 18): new_regions.append(bs2dict(old_regions[i]))
 
